@@ -61,7 +61,7 @@
     background: -ms-linear-gradient(top, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
     background: linear-gradient(to bottom, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8282ff', endColorstr='#ffffff', GradientType=0 );
-    z-index: 1;
+    z-index: 410;
 }
 
 .list-options-user{
@@ -112,3 +112,15 @@
     font-size: 12px;
 }
 /** END OPTIONS ROUTE */
+
+/** MAP */
+
+.leaflet-control-container .leaflet-top.leaflet-right{
+    display: none !important;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+    display: none;
+}
+
+/** END MAP*/

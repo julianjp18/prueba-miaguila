@@ -1,0 +1,19 @@
+{
+    "favorites":{
+        "1":{
+            "location":"Usaquén",
+            "description":"Norte de Bogotá, Colombia",
+            "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg"
+        },
+        "2":{
+            "location":"Chapinero",
+            "description":"Norte de Bogotá, Colombia",
+            "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg"
+        },
+        "3":{
+            "location":"Engativá",
+            "description":"Noroccidente de Bogotá, Colombia",
+            "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg"
+        }
+    }
+}
