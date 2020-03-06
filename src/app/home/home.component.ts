@@ -216,6 +216,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }).addTo(this.map)
    }
 
+   onChangeContainerRoute(){
+
+     if(document.getElementById('container-route').style.display === 'none'){
+      document.getElementById('container-route').style.display = 'block';
+     }else{
+      document.getElementById('container-route').style.display = 'none'
+     }
+   }
+
    ngAfterViewInit(){
     this.map = L.map('map').setView([4.6097, -74.0817], 9)
 

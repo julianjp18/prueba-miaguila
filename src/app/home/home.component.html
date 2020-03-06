@@ -1,141 +1,139 @@
 <mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side" >
+  <mat-drawer #drawer class="example-sidenav" id="example-sidenav" mode="side" opened>
     <mia-sidenav></mia-sidenav>
   </mat-drawer>
   
-    <div class="example-sidenav-content">
-      <div class="container-route">
-        <mat-grid-list class="list-options-user" cols="3" rowHeight="100px">
-          <mat-grid-tile>
-            <p><mat-icon> person_pin</mat-icon></p>
-            <br>
-            <p>Para mi</p>
+  <div class="example-sidenav-content">
+    <div class="container-route" id="container-route">
+      <mat-grid-list class="list-options-user" cols="3" rowHeight="100px">
+        <mat-grid-tile>
+          <p><mat-icon> person_pin</mat-icon></p>
+          <br>
+          <p>Para mi</p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-icon>supervisor_account</mat-icon>
+          <p>Colega</p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-icon>supervised_user_circle</mat-icon>
+          <p>Invitado</p>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div class="container-init" id="container-init">
+        <mat-grid-list class="list-numbers-user" cols="2" rowHeight="100px">
+          <mat-grid-tile class="left">
+            <mat-icon class="icon icon-selected">filter_1</mat-icon>
+            <h4>Origen</h4>
           </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-icon>supervisor_account</mat-icon>
-            <p>Colega</p>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-icon>supervised_user_circle</mat-icon>
-            <p>Invitado</p>
+          <mat-grid-tile class="right">
+            <mat-icon class="icon">filter_2</mat-icon>
+            <mat-icon class="icon">filter_3</mat-icon>
+            <mat-icon class="icon">filter_4</mat-icon>
+            <mat-icon class="icon">filter_5</mat-icon>
+            <mat-icon class="icon">filter_6</mat-icon>
           </mat-grid-tile>
         </mat-grid-list>
-        <div class="container-init" id="container-init">
-          <mat-grid-list class="list-numbers-user" cols="2" rowHeight="100px">
-            <mat-grid-tile class="left">
-              <mat-icon class="icon icon-selected">filter_1</mat-icon>
-              <h4>Origen</h4>
-            </mat-grid-tile>
-            <mat-grid-tile class="right">
-              <mat-icon class="icon">filter_2</mat-icon>
-              <mat-icon class="icon">filter_3</mat-icon>
-              <mat-icon class="icon">filter_4</mat-icon>
-              <mat-icon class="icon">filter_5</mat-icon>
-              <mat-icon class="icon">filter_6</mat-icon>
-            </mat-grid-tile>
-          </mat-grid-list>
-          <hr>
-          <mat-accordion>
-            <mat-expansion-panel (opened)="true" aria-expanded="true">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <h3>Cundinamarca</h3>
-                </mat-panel-title>
-                <mat-panel-description>
-                  
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <div *ngIf="alertMessage != ''" class="alert-init-message">{{alertMessage}}</div>
-              <form class="example-form">
-                <mat-icon> my_location</mat-icon>
-                <mat-form-field class="input-origin">
-                  <mat-label>¿Dónde te recogemos?</mat-label>
-                  <input matInput placeholder="" value="" name="txt-origen" id="txt-origen">
-                </mat-form-field>
-              </form>
-              <h2 class="fav-title">Favoritos</h2>
-              <mat-list class="fav-list">
-                <mat-list-item *ngFor="let item of favorites" (click)="onHandleInit(item.latitude,item.longitude, item.location)">
+        <hr>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="true" aria-expanded="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>Cundinamarca</h3>
+              </mat-panel-title>
+              <mat-panel-description>
+                
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngIf="alertMessage != ''" class="alert-init-message">{{alertMessage}}</div>
+            <form class="example-form">
+              <mat-icon> my_location</mat-icon>
+              <mat-form-field class="input-origin">
+                <mat-label>¿Dónde te recogemos?</mat-label>
+                <input matInput placeholder="" value="" name="txt-origen" id="txt-origen">
+              </mat-form-field>
+            </form>
+            <h2 class="fav-title">Favoritos</h2>
+            <mat-list class="fav-list">
+              <mat-list-item *ngFor="let item of favorites" (click)="onHandleInit(item.latitude,item.longitude, item.location)">
+                  <img matListAvatar class="avatar-list" src={{item.imgUrl}} alt="fav icon">
+                  <h3 matLine class="title-item-list" > {{item.location}} </h3>
+                  <p matLine class="descrip-item-list">
+                    <span> {{item.description}} </span>
+                  </p>
+              </mat-list-item>
+            </mat-list>
+            <br>
+            <div class="right container-button">
+              <button mat-raised-button (click)="sendInit()"><mat-icon>arrow_forward</mat-icon></button>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="container-end" id="container-end">
+        <mat-grid-list class="list-numbers-user" cols="2" rowHeight="100px">
+          <mat-grid-tile class="left">
+            <mat-icon class="icon icon-previously">filter_1</mat-icon>
+            <mat-icon class="icon icon-selected">filter_2</mat-icon>
+            <h4>Destino</h4>
+          </mat-grid-tile>
+          <mat-grid-tile class="right">
+            <mat-icon class="icon">filter_3</mat-icon>
+            <mat-icon class="icon">filter_4</mat-icon>
+            <mat-icon class="icon">filter_5</mat-icon>
+            <mat-icon class="icon">filter_6</mat-icon>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <hr>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="true" aria-expanded="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3>Cundinamarca</h3>
+              </mat-panel-title>
+              <mat-panel-description>
+                
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngIf="alertMessage != ''" class="alert-init-message">{{alertMessage}}</div>
+            <form class="example-form">
+              <mat-icon> my_location</mat-icon>
+              <mat-form-field class="input-origin">
+                <mat-label>¿Dónde quieres ir?</mat-label>
+                <input matInput placeholder="" value="" name="txt-destiny" id="txt-destiny">
+              </mat-form-field>
+            </form>
+            <h2 class="fav-title">Favoritos</h2>
+            <mat-list class="fav-list">
+                <mat-list-item *ngFor="let item of favorites" (click)="onHandleDestiny(item.latitude,item.longitude, item.location)">
                     <img matListAvatar class="avatar-list" src={{item.imgUrl}} alt="fav icon">
-                    <h3 matLine class="title-item-list" > {{item.location}} </h3>
+                    <h3 matLine class="title-item-list"> {{item.location}} </h3>
                     <p matLine class="descrip-item-list">
                       <span> {{item.description}} </span>
                     </p>
                 </mat-list-item>
-              </mat-list>
-              <br>
-              <div class="right container-button">
-                <button mat-raised-button (click)="sendInit()"><mat-icon>arrow_forward</mat-icon></button>
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </div>
-        <div class="container-end" id="container-end">
-          <mat-grid-list class="list-numbers-user" cols="2" rowHeight="100px">
-            <mat-grid-tile class="left">
-              <mat-icon class="icon icon-previously">filter_1</mat-icon>
-              <mat-icon class="icon icon-selected">filter_2</mat-icon>
-              <h4>Destino</h4>
-            </mat-grid-tile>
-            <mat-grid-tile class="right">
-              <mat-icon class="icon">filter_3</mat-icon>
-              <mat-icon class="icon">filter_4</mat-icon>
-              <mat-icon class="icon">filter_5</mat-icon>
-              <mat-icon class="icon">filter_6</mat-icon>
-            </mat-grid-tile>
-          </mat-grid-list>
-          <hr>
-          <mat-accordion>
-            <mat-expansion-panel (opened)="true" aria-expanded="true">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <h3>Cundinamarca</h3>
-                </mat-panel-title>
-                <mat-panel-description>
-                  
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <div *ngIf="alertMessage != ''" class="alert-init-message">{{alertMessage}}</div>
-              <form class="example-form">
-                <mat-icon> my_location</mat-icon>
-                <mat-form-field class="input-origin">
-                  <mat-label>¿Dónde quieres ir?</mat-label>
-                  <input matInput placeholder="" value="" name="txt-destiny" id="txt-destiny">
-                </mat-form-field>
-              </form>
-              <h2 class="fav-title">Favoritos</h2>
-              <mat-list class="fav-list">
-                  <mat-list-item *ngFor="let item of favorites" (click)="onHandleDestiny(item.latitude,item.longitude, item.location)">
-                      <img matListAvatar class="avatar-list" src={{item.imgUrl}} alt="fav icon">
-                      <h3 matLine class="title-item-list"> {{item.location}} </h3>
-                      <p matLine class="descrip-item-list">
-                        <span> {{item.description}} </span>
-                      </p>
-                  </mat-list-item>
-                
-              </mat-list>
-              <br>
-              <div class="right container-button">
-                <button mat-raised-button (click)="sendRoute()"><mat-icon>location_searching</mat-icon></button>
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </div>
-      </div>
-      <div id="map" #map style="width:100%;height:100vh"></div>
-      <div class="menu-responsive">
-        <div class="col-left">
-          <button type="button" mat-raised-button (click)="drawer.toggle()">
-            <mat-icon>menu</mat-icon>
-          </button>
-        </div>
-        <div class="col-right">
-          <button type="button" mat-raised-button (click)="drawer.toggle()">
-            <mat-icon>map</mat-icon>
-          </button>
-        </div>
+              
+            </mat-list>
+            <br>
+            <div class="right container-button">
+              <button mat-raised-button (click)="sendRoute()"><mat-icon>location_searching</mat-icon></button>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </div>
-  
-
-  </mat-drawer-container>
+    <div id="map" #map style="width:100%;height:100vh"></div>
+    <div class="menu-responsive">
+      <div class="col-left">
+        <button type="button" mat-raised-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="col-right">
+        <button type="button" mat-raised-button (click)="onChangeContainerRoute()">
+          <mat-icon>map</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>

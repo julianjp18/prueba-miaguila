@@ -111,6 +111,11 @@ $primaryColor: #00CC99;
 }
 
 @media only screen and (max-width: 780px) {
+    .container-route{
+        display: none;
+        width: 54vw;
+    }
+
     .col-right{
         display: block;
         z-index: 405;
