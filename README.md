@@ -1,5 +1,44 @@
 # PruebaMiaguila
 
+# Descripci贸n:
+La prueba se realiz贸 utilizando:
+- Angular 8
+- Angular Material: https://material.angular.io/
+- Leaflet (Interactividad con mapas): https://leafletjs.com/
+- OpenStreetMap
+
+Inicia con **ng serve**, Entra a la ventana principal donde se encuentra el men煤 en la parte izquierda,
+en la parte central la opci贸n para agregar una direcci贸n de origen o seleccionar una de Favoritos.
+
+Direcciones de origen habilitadas para ingresar en el campo origen del proyecto:
+- Suba
+- Teusaquillo
+- Ch铆a
+- Tocancip谩
+
+La siguiente vista en la parte central es la opci贸n para agregar una direcci贸n de destino o seleccionar una de Favoritos.
+
+Direccion de destino habilitadas para ingresar en el campo destino del proyecto:
+- Suba
+- Teusaquillo
+- Ch铆a
+- Tocancip谩
+
+En la parte derecha se puede visualizar el mapa de OpenStreetMap, all铆 se van marcando las rutas que se seleccionaron.
+
+## Componentes
+- **Sidenav** contiene la secci贸n izquierda de la aplicaci贸n, es decir, todo el men煤 lateral izquierdo.
+- **home** donde se encuentra la ventana principal de la aplicaci贸n.
+
+## CSS **SASS**
+
+## Assets
+Dentro de est谩 carpeta se encuentran las carpetas:
+- files: se encuentra el archivo .json con la informaci贸n de las locaciones favoritas.
+- leaflet: archivos .js y .css de la libreria.
+
+### gitFlow utilizado
+--------------------
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
@@ -25,5 +64,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-"# Finalizaci frontend vista selecci origen" 
-"### Tambi俷 se agrego paquete para Google Maps" 
+"# Finalizaci锟絥 frontend vista selecci锟絥 origen" 
+"### Tambi锟絥 se agrego paquete para Google Maps" 
+"#Agregando API openstreetmap y leaflet" 
+"Tambi俷 se encuentra la vista origen y destino terminadas" 

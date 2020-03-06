@@ -12,6 +12,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent 
+  },
+  {
+    path:'destiny',
+    redirectTo: 'home',
+    pathMatch: 'prefix'
   }
 ];
 

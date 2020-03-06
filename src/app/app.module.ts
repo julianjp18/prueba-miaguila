@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     MaterialModule,
     HttpClientModule
   ],
+  exports:[SidenavComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
