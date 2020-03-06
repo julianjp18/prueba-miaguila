@@ -27,3 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 "# Finalizaci¢n frontend vista selecci¢n origen" 
 "### Tambi‚n se agrego paquete para Google Maps" 
+"# Agregando secci¢n responsive" 
+"Se agregaron botones en la parte de abajo para abrir y cerrar sidenav y vista de opciones" 
