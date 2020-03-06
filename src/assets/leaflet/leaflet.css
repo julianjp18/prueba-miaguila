@@ -162,6 +162,9 @@
 .leaflet-right .leaflet-control {
 	margin-right: 10px;
 	}
+.leaflet-right .leaflet-control{
+	display:none;
+}
 
 
 /* zoom and fade animations */

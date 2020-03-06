@@ -1,65 +1,22 @@
-/** SIDENAV */
-.center{
-    text-align: center;
-}
+$primaryColor: #00CC99;
 
-.example-container{
-    height: 100vh
-}
 
-.img-logo{
-    background-color: #808080;
-}
-
-.text-list{
-    margin-left: 1em;
-}
-
-.img-avatar{
-    width: 25%;
-    margin-top: 2em;
-    text-align: center;
-}
-
-.name-user{
-    margin:0;
-}
-
-.type-user{
-    margin-top: .5em;
-    margin-bottom: 0;
-}
-
-.item-selected{
-    background-color: #eeeeee;
-    border-left: 6px solid #00CC99;
-}
-
-.mat-drawer-inner-container,.example-sidenav{
-    overflow-x: hidden;
-}
-
-.mat-list{
-    width: 98%;
-}
-/** END SIDENAV */
-
-/** OPTIONS ROUTE */
+/** OPTIONS INIT ROUTE */
 .container-route{
     position: absolute;
-    top: 7vh;
+    top: 2vh;
     left: 13px;
-    width: 50%;
+    width: 35%;
     max-height: 82vh;
     padding: 2em 1em;
-    background: rgba(130,130,255,1);
-    background: rgba(130,130,255,1);
-    background: -moz-linear-gradient(top, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(130,130,255,1)), color-stop(26%, rgba(130,130,255,1)), color-stop(26%, rgba(250,250,250,1)), color-stop(72%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-    background: -webkit-linear-gradient(top, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
-    background: -o-linear-gradient(top, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
-    background: -ms-linear-gradient(top, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
-    background: linear-gradient(to bottom, rgba(130,130,255,1) 0%, rgba(130,130,255,1) 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: $primaryColor;
+    background: $primaryColor;
+    background: -moz-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $primaryColor), color-stop(26%, $primaryColor), color-stop(26%, rgba(250,250,250,1)), color-stop(72%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8282ff', endColorstr='#ffffff', GradientType=0 );
     z-index: 410;
 }
@@ -96,7 +53,7 @@
 
 .fav-list{
     overflow: auto;
-    max-height: 14vh;
+    max-height: 19vh;
 }
 
 .avatar-list{
@@ -111,16 +68,70 @@
 .fav-list .descrip-item-list{
     font-size: 12px;
 }
-/** END OPTIONS ROUTE */
+
+.icon-selected{
+    color: $primaryColor;
+}
+
+.icon-previously{
+    color: #cfcccc
+}
+
+.alert-init-message{
+    padding: .4em;
+    background-color: #ffe281;
+    font-size: 12px;
+}
+/** OPTIONS INIT ROUTE */
 
 /** MAP */
 
-.leaflet-control-container .leaflet-top.leaflet-right{
+.leaflet-control-container .leaflet-top.leaflet-right,.leaflet-right .leaflet-control{
     display: none !important;
 }
 
-.leaflet-control-container .leaflet-routing-container-hide {
+.leaflet-control-container, .leaflet-control-container .leaflet-routing-container-hide, .leaflet-right .leaflet-control {
     display: none;
 }
 
 /** END MAP*/
+
+/** OPTIONS END ROUTE */
+.container-end{
+    display: none;
+}
+
+/** END OPTIONS END ROUTE*/
+
+/** RESPONSIVE MODE */
+
+.col-right,.col-left{
+    display: none;
+    
+}
+
+@media only screen and (max-width: 780px) {
+    .container-route{
+        display: none;
+        width: 54vw;
+    }
+
+    .col-right{
+        display: block;
+        z-index: 405;
+        position: absolute;
+        bottom: 1%;
+        right: 0;
+    }
+    
+    .col-left{
+        display: block;
+        z-index: 405;
+        position: absolute;
+        bottom: 1%;
+    }
+}
+
+
+
+/** END RESPONSIVE MODE*/
