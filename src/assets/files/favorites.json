@@ -1,0 +1,23 @@
+[
+    {
+        "location":"Usaquén",
+        "description":"Norte de Bogotá, Colombia",
+        "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg",
+        "latitude": "4.7334",
+        "longitude": "-74.0273"
+    },
+    {
+        "location":"Museo del oro",
+        "description":"Centro de Bogotá, Colombia",
+        "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg",
+        "latitude": "4.6017",
+        "longitude": "-74.0719"
+    },
+    {
+        "location":"Engativá",
+        "description":"Noroccidente de Bogotá, Colombia",
+        "imgUrl":"https://image.flaticon.com/icons/svg/740/740882.svg",
+        "latitude": "4.7166",
+        "longitude": "-74.15"
+    }
+]

@@ -1,0 +1,137 @@
+$primaryColor: #00CC99;
+
+
+/** OPTIONS INIT ROUTE */
+.container-route{
+    position: absolute;
+    top: 2vh;
+    left: 13px;
+    width: 35%;
+    max-height: 82vh;
+    padding: 2em 1em;
+    background: $primaryColor;
+    background: $primaryColor;
+    background: -moz-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $primaryColor), color-stop(26%, $primaryColor), color-stop(26%, rgba(250,250,250,1)), color-stop(72%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, $primaryColor 0%, $primaryColor 26%, rgba(250,250,250,1) 26%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8282ff', endColorstr='#ffffff', GradientType=0 );
+    z-index: 410;
+}
+
+.list-options-user{
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 10px 10px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 10px 10px -10px rgba(0,0,0,0.75);
+    box-shadow: 1px 10px 10px -10px rgba(0,0,0,0.75);
+    
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.list-numbers-user .icon{
+    margin-right: .2em;
+}
+
+.input-origin{
+    width: 90%;
+    margin-left: .4em;
+}
+
+.fav-title{
+    margin: .2em 0;
+}
+
+.fav-list{
+    overflow: auto;
+    max-height: 19vh;
+}
+
+.avatar-list{
+    height: 30px;
+    width: 30px;
+}
+
+.fav-list .title-item-list{
+    font-size: 15px;
+}
+
+.fav-list .descrip-item-list{
+    font-size: 12px;
+}
+
+.icon-selected{
+    color: $primaryColor;
+}
+
+.icon-previously{
+    color: #cfcccc
+}
+
+.alert-init-message{
+    padding: .4em;
+    background-color: #ffe281;
+    font-size: 12px;
+}
+/** OPTIONS INIT ROUTE */
+
+/** MAP */
+
+.leaflet-control-container .leaflet-top.leaflet-right,.leaflet-right .leaflet-control{
+    display: none !important;
+}
+
+.leaflet-control-container, .leaflet-control-container .leaflet-routing-container-hide, .leaflet-right .leaflet-control {
+    display: none;
+}
+
+/** END MAP*/
+
+/** OPTIONS END ROUTE */
+.container-end{
+    display: none;
+}
+
+/** END OPTIONS END ROUTE*/
+
+/** RESPONSIVE MODE */
+
+.col-right,.col-left{
+    display: none;
+    
+}
+
+@media only screen and (max-width: 780px) {
+    .container-route{
+        display: none;
+        width: 54vw;
+    }
+
+    .col-right{
+        display: block;
+        z-index: 405;
+        position: absolute;
+        bottom: 1%;
+        right: 0;
+    }
+    
+    .col-left{
+        display: block;
+        z-index: 405;
+        position: absolute;
+        bottom: 1%;
+    }
+}
+
+
+
+/** END RESPONSIVE MODE*/

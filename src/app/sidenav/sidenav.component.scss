@@ -1,0 +1,52 @@
+$primaryColor: #00CC99;
+
+/** SIDENAV */
+.center{
+    text-align: center;
+}
+
+.example-container{
+    height: 100vh
+}
+
+.img-logo{
+    background-color: #808080;
+}
+
+.text-list{
+    margin-left: 1em;
+}
+
+.img-avatar{
+    width: 25%;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.name-user{
+    margin:0;
+}
+
+.type-user{
+    margin-top: .5em;
+    margin-bottom: 0;
+}
+
+.item-selected{
+    background-color: #eeeeee;
+    border-left: 6px solid $primaryColor;
+}
+
+.mat-drawer-inner-container,.example-sidenav{
+    overflow-x: hidden;
+}
+
+.mat-list{
+    width: 98%;
+}
+
+.mat-list-item:hover{
+    background: aliceblue;
+    cursor: pointer;
+}
+/** END SIDENAV */
